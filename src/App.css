@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Poppins:wght@300;400;600&display=swap');
+
+
+:root {
+    /* ============= COLORS ============ */
+    --white-text: #fff;
+
+    --green-color-50: #dfffed;
+    --green-color-100: #b5fad4;
+    --green-color-200: #88f4ba;
+    --green-color-300: #5bf0a0;
+    --green-color-400: #31ec85;
+    --green-color-500: #1ad26c;
+    --green-color-600: #0fa453;
+    --green-color-700: #5c6661;
+    --green-color-800: #004722;
+    --green-color-900: #001907;
+
+    --black-color-50: #f2f2f2;
+    --black-color-100: #d9d9d9;
+    --black-color-200: #bfbfbf;
+    --black-color-300: #a6a6a6;
+    --black-color-400: #8c8c8c;
+    --black-color-500: #737373;
+    --black-color-600: #595959;
+    --black-color-700: #404040;
+    --black-color-800: #262626;
+    --black-color-900: #0d0d0d;
+
+    /* ============= FONT SIZE ============ */
+    --big-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+    /* ========== Font Family ============= */
+    --heading-font: 'Lilita One', cursive;
+    --body-font: 'Poppins', sans-serif;
+
+    /* ============= Font Weight ============== */
+    --light-weight: 300;
+    --medium-weight: 400;
+    --bold-weight: 600;
+        /*========== Margines Bottom ==========*/
+    /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
+    --mb-0-25: .25rem;
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
+    --mb-5: 5rem;
+
+    /* ============ Card border color ============== */
+    --border-color: #ececec;
+  }
+  @media screen and (min-width: 968px) {
+    :root {
+        --big-font-size: 3rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+    }
+}
+
+  * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      transition: 0.3s;
+  }
+  html {
+      scroll-behavior: smooth;
+  }
+  body {
+      font-family: var(--body-font);
+      font-size: var(--normal-font-size);
+      background-color: var(--black-color-50);
+      color: var(--black-color-800);
+  }
+  h1, h2, h3, h4 {
+      color: var(--title-color);
+      font-weight: var(--medium-weight);
+  }
+  ul {
+      list-style: none;
+  }
+  a {
+      text-decoration: none;
+  }
+  header {
+      width: 100%;
+      color: var(--white-text);
+      text-align: center;
+      font-size: var(--big-font-size);
+      background-color: var(--green-color-600);
+      padding: var(--mb-2);;
+      padding-bottom: var(--mb-5);
+      text-transform: uppercase;
+  }
+  footer {
+    font-size: var(--small-font-size);
+    font-weight: var(--light-weight);
+    text-align: center;
+    color: var(--black-color-300);
+    background-color: var(--black-color-800);
+    padding-top: var(--mb-5);
+    margin-top: var(--mb-0-75);
+}
+  section {
+    margin: auto;
+    width: 80%;
+  }
+  form {
+      width: 100%;
+      padding: auto;
+      margin: auto;
+  }
+  input {
+      outline: none;
+      padding: var(--mb-0-25);
+      color: var(--white-text);
+      width: 35%;
+      margin-right: var(--mb-0-25);
+      border-radius: var(--mb-0-75) 0 0 var(--mb-0-75);
+      background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(1.8px);
+      -webkit-backdrop-filter: blur(1.8px);
+      border: 1px solid rgba(255, 255, 255, 0.44);
+  }
+  button {
+      font-weight: var(--medium-weight);
+      color: var(--green-color-600);
+      border-radius: 0 var(--mb-0-75) var(--mb-0-75) 0;
+      padding: var(--mb-0-5) var(--mb-0-75);
+      border: 1px solid rgba(255, 255, 255, 0.44);
+      background-color: var(--white-text);
+      cursor: pointer;
+  }
+  input, button {
+    height: 40px;
+  }
+  .header__img {
+      width: 150px;
+      margin-right: var(--mb-2);
+  }
+  .header__text {
+      text-align: justify;
+  }
+  .header__title {
+      font-family: var(--heading-font);
+      font-weight: var(--bold-weight);
+      font-size: var(--big-font-size);
+      letter-spacing: 5px;
+      text-shadow: 1px 1px 0 var(--black-color-800), 
+                    1px -1px 0 var(--black-color-800), 
+                    -1px 1px 0 var(--black-color-800), 
+                    -1px -1px 0 var(--black-color-800), 
+                    1px 0px 0 var(--black-color-800), 
+                    0px 1px 0 var(--black-color-800), 
+                    -1px 0px 0 var(--black-color-800), 
+                    0px -1px 0 var(--black-color-800);
+  }
+  .header__subtitle {
+      margin-top: 0;
+      margin-bottom: var(--mb-2);
+      font-size: var(--normal-font-size);
+      font-weight: var(--medium-weight);
+  }
+  .header__word-name {
+      padding: var(--mb-0-5);
+      font-size: var(--normal-font-size);
+  }
+  .section__card {
+    border-radius: var(--mb-0-5);
+    padding: var(--mb-1-5);
+    margin-top: -30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: var(--mb-3);
+    background-color: var(--white-text);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 19px 38px rgba(0, 0, 0, .10),
+                0 15px 12px rgba(0, 0, 0, .02);
+  }
+  .section__img {
+    width: 50vw;
+    max-width: 100%;
+}
+  .flex__container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+  }
+  .footer__text {
+      margin-bottom: var(--mb-3);
+  }
+  .footer__dev {
+    letter-spacing: 2px;
+    padding-bottom: var(--mb-0-5);
+  }
+  .footer__icon {
+      color: var(--green-color-600);
+  }
+  .line {
+      position: relative;
+      width: 82%;
+      height: 1px;
+      background-color: var(--green-color-600);
+      margin-right: var(--mb-0-75);
+  }
+  .line::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 99.5%;
+      border-radius: 50%;
+      border: 1px solid var(--green-color-600);
+      width: 8px;
+      height: 8px;
+  }
+  .result__name {
+      font-size: var(--normal-font-size);
+      margin: var(--mb-0-5);
+  }
+  .result__wrapper {
+      padding: var(--mb-0-5);
+      margin: var(--mb-0-5);
+      border-radius: var(--mb-0-5);
+      border: 1px solid var(--black-color-50);
+  }
+  .result__title {
+      text-align: center;
+      padding: var(--mb-0-5);
+      margin: var(--mb-0-25);
+      color: var(--green-color-600);
+      border-radius: var(--mb-0-5) var(--mb-0-5) 0 0;
+      background-color: var(--green-color-50);
+      border-top: 1px solid var(--green-color-600);
+  }
+  .result__text {
+      padding: var(--mb-0-5);
+      padding-left: var(--mb-1);
+      border-top: 2px solid var(--black-color-50);
+  }
+  .result__icon {
+      margin-right: var(--mb-0-25);
+  }
+  .list {
+      width: 220px;
+      padding: var(--mb-0-75);
+  }
+  .loading {
+    border: 16px solid #0d0d0d;;
+    border-radius: 50%;
+    border-top: 16px solid var(--green-color-600);
+    border-bottom: 16px solid var(--green-color-600);
+    width: 150px;
+    height: 150px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  @media screen and (max-width: 600px) {
+    header {
+      padding-bottom: calc(2* var(--mb-3));
+      border-radius: 0 0 30% 30%;
+      }
+    .header__text {
+        text-align: center;
+    }
+    .header__img {
+        width: 100px;
+        margin-right: 0;
+    }
+    section {
+        width: 90%;
+      }
+    .section__img {
+        width: 280px;
+        max-width: 100%;
+    }
+    .section__card {
+        margin-top: -100px;
+    }
+    .section__card, .result__wrapper {
+        padding-left: var(--mb-0-25);
+        padding-right: var(--mb-0-25);
+    }
+    .list {
+        width: 150px;
+        padding: var(--mb-0-5);
+    }
+    input {
+        width: 70%;
+    }
+    .line {
+        width: 70%;
+    }
+    .loading {
+        width: 100px;
+        height: 100px;
+      }
+  }

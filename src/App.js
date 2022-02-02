@@ -1,57 +1,41 @@
-import React from "react";
-import {
-  ThemeProvider,
-  CSSReset,
-  Box,
-  Image,
-  Flex,
-  Badge,
-  Text
-} from "@chakra-ui/core";
-import { MdStar } from "react-icons/md";
-import { customTheme } from "./theme";
+import { createContext, useState } from 'react';
+import { FaCopyright, FaDev } from 'react-icons/fa';
+import './App.css';
+import Header from './components/Header';
+import Result from './components/Result';
+
+export const InputContext = createContext();
+
 
 function App() {
+ const [inputValue, setInputValue] = useState('');
+
+ const value = {
+  inputValue, setInputValue
+ }
+
+
+
   return (
-    <ThemeProvider theme={customTheme}>
-      <CSSReset />
+    <InputContext.Provider value={value}>
+    <Header />
+    <section>
+      <div className="section__card">
 
-      <Box
-        maxWidth={400}
-        p={4}
-        borderRadius={4}
-        borderWidth={2}
-        borderStyle="solid"
-        m="auto"
-        my={4}
-      >
-        <Image rounded="md" src="https://bit.ly/2k1H1t6" />
-        <Flex align="baseline" mt={2}>
-          <Badge variantColor="brand">Plus</Badge>
-          <Text
-            ml={2}
-            textTransform="uppercase"
-            fontSize="sm"
-            fontWeight="bold"
-            color="brand.800"
-          >
-            Verified &bull; Cape Town
-          </Text>
-        </Flex>
-        <Text mt={2} fontSize="xl" fontWeight="semibold" lineHeight="short">
-          Modern, Chic Penthouse with Mountain, City & Sea Views
-        </Text>
-        <Text mt={2}>$119/night</Text>
-        <Flex mt={2} align="center">
-          <Box as={MdStar} color="orange.400" />
-          <Text ml={1} fontsize="sm">
-            <b>4.84</b> (190)
-          </Text>
-        </Flex>
-      </Box>
+        <Result />
 
-      <Text textAlign="center">Create React App Chakra UI</Text>
-    </ThemeProvider>
+      </div>
+    </section>
+    <footer> 
+
+    <div className='footer__text'><FaCopyright />  All rights reserved {new Date().getFullYear()}</div>
+
+    <div className='flex__container' style={{justifyContent:'flex-start', width:'100%'}}>
+    <span className='line'></span> 
+    <span className='footer__dev'><FaDev className='footer__icon' /> Alvin</span></div>
+
+    </footer>
+    </InputContext.Provider>
   );
 }
 
