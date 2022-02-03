@@ -79,7 +79,7 @@ if (data) {
 }
 
 if (error) {
-    return <div className='flex__container'>Error: {error} </div>;
+    return <div className='flex__container'>Error: not found. </div>;
 }
 
   return defaultImage  && <div className='flex__container'><img className='section__img' src={reading} alt='avatar' /></div>
